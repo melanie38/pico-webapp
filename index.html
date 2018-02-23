@@ -19,7 +19,13 @@
 </div>
 <div>
   <h3>Current Temperature</h3>
-  <button type="submit" ng-submit="addTiming()">Refresh</button>
+  <button type="submit" ng-submit="getAll()">Refresh</button>
+  <div ng-repeat="timing in timings | orderBy: '-ordinal'">
+    {{timing.temperature}} &middot;
+    {{timing.timestamp}} &middot;
+    <!-- <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
+    <span ng-if="!!timing.time_in">&middot; {{timeDiff(timing)}}</span> -->
+  </div>
 </div>
 <div>
   <h3>Recent Temperatures</h3>
@@ -27,19 +33,11 @@
 <div>
   <h3>Threshold Violations</h3>
 </div>
-  <form ng-submit="addTiming()" style = "margin-top:30px;">
+  <!-- <form ng-submit="addTiming()" style = "margin-top:30px;">
     <input type="text" ng-model="number" placeholder="number"></input>
     <input type="text" ng-model="name" placeholder="name"></input>
     <button type="submit">timing started</button>
-  </form>
-  <div ng-repeat="timing in timings | orderBy: '-ordinal'">
-    {{timing.number}} &middot;
-    {{timing.name}} &middot;
-    {{timing.time_out}} &middot;
-    {{timing.time_in}}
-    <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
-    <span ng-if="!!timing.time_in">&middot; {{timeDiff(timing)}}</span>
-  </div>
+  </form> -->
   <div class="eci">
     <input type="text" ng-model="eci" size="29"></input>
   </div>

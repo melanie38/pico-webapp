@@ -3,7 +3,8 @@ angular.module('timing', [])
   '$scope','$http',
   function($scope,$http){
     $scope.timings = [];
-    $scope.eci = "cj1i5z6240003s5ddpomhahb6";
+    $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
+    $scope.rid = "cjdzk0bd10005j0p9x16brkgw";
 
     var bURL = '/sky/event/'+$scope.eci+'/eid/timing/started';
     $scope.addTiming = function() {
@@ -23,7 +24,7 @@ angular.module('timing', [])
       });
     };
 
-    var gURL = '/sky/cloud/'+$scope.eci+'/timing_tracker/entries';
+    var gURL = '/sky/cloud/'+$scope.eci+'/' + $scope.rid + '/temperature_store/temperatures';
     $scope.getAll = function() {
       return $http.get(gURL).success(function(data){
         angular.copy(data, $scope.timings);
