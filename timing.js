@@ -24,7 +24,7 @@ angular.module('timing', [])
       });
     };
 
-    var gURL = '/sky/cloud/'+$scope.eci+'/' + $scope.rid + '/temperature_store/temperatures';
+    var gURL = '/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
     $scope.getAll = function() {
       return $http.get(gURL).success(function(data){
         angular.copy(data, $scope.timings);
