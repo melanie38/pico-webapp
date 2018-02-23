@@ -20,7 +20,7 @@
 <div>
   <h3>Current Temperature</h3>
   <button type="submit" ng-submit="getAll()">Refresh</button>
-  <div ng-repeat="timing in timings | orderBy: '-ordinal'">
+  <div ng-repeat="timing in timings">
     {{timing.temperature}} &middot;
     {{timing.timestamp}} &middot;
     <!-- <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
