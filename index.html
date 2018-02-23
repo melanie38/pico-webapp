@@ -19,7 +19,7 @@
 </div>
 <div>
   <h3>Current Temperature</h3>
-  <button type="submit" ng-submit="getAll()">Refresh</button>
+  <button type="button" class="btn btn-primary" ng-click="getAll()">Refresh</button>
   <div ng-repeat="timing in timings">
     {{timing.temperature}} &middot;
     {{timing.timestamp}} &middot;

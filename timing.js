@@ -4,7 +4,6 @@ angular.module('timing', [])
   function($scope,$http){
     $scope.timings = [];
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
-    $scope.rid = "cjdzk0bd10005j0p9x16brkgw";
 
     var bURL = '/sky/event/'+$scope.eci+'/eid/timing/started';
     $scope.addTiming = function() {
@@ -24,9 +23,9 @@ angular.module('timing', [])
       });
     };
 
-    var gURL = '35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
+    var gURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
     $scope.getAll = function() {
-      return $http.get("http://35.161.218.80:8080/sky/cloud/UKs5YQUWhvJvrky73HCs8f/temperature_store/temperatures").success(function(data){
+      return $http.get(gURL).success(function(data){
         angular.copy(data, $scope.timings);
       });
     };
