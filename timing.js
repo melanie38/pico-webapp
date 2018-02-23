@@ -23,7 +23,7 @@ angular.module('timing', [])
       });
     };
 
-    var gURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
+    var gURL = '/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
     $scope.getAll = function() {
       return $http.get(gURL).success(function(data){
         angular.copy(data, $scope.timings);
