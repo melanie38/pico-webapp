@@ -26,7 +26,7 @@ angular.module('timing', [])
 
     var gURL = '35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
     $scope.getAll = function() {
-      return $http.get(gURL).success(function(data){
+      return $http.get("http://35.161.218.80:8080/sky/cloud/UKs5YQUWhvJvrky73HCs8f/temperature_store/temperatures").success(function(data){
         angular.copy(data, $scope.timings);
       });
     };
