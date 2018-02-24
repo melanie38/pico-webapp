@@ -16,16 +16,16 @@
 <div class="col-md-8 col-md-offset-2">
 <div class="page-header">
   <h1>Temperature</h1>
+  <button type="button" class="btn btn-primary" ng-click="getAll()">Refresh</button>
 </div>
 <div>
   <h3>Current Temperature</h3>
-  <button type="button" class="btn btn-primary" ng-click="getAll()">Refresh</button>
 </div>
 <div>
   <h3>Recent Temperatures</h3>
   <div ng-repeat="timing in timings">
     {{timing.temperature}} &middot;
-    {{timing.timestamp}} &middot;
+    {{timing.timestamp}}
     <!-- <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
     <span ng-if="!!timing.time_in">&middot; {{timeDiff(timing)}}</span> -->
   </div>
@@ -34,7 +34,7 @@
   <h3>Threshold Violations</h3>
   <div ng-repeat="violation in violations">
     {{violation.temperature}} &middot;
-    {{violation.timestamp}} &middot;
+    {{violation.timestamp}}
   </div>
 </div>
   <!-- <form ng-submit="addTiming()" style = "margin-top:30px;">
