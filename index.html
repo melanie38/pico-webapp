@@ -21,13 +21,13 @@
 <div>
   <h3>Current Temperature</h3>
   <div>
-    {{timings[0].temperature}} &middot;
-    {{timings[0].timestamp}}
+    {{timings[timings.length - 1].temperature}} &middot;
+    {{timings[timings.length - 1].timestamp}}
   </div>
 </div>
 <div>
   <h3>Recent Temperatures</h3>
-  <div ng-repeat="timing in timings">
+  <div ng-repeat="timing in timings | orderBy'-'">
     {{timing.temperature}} &middot;
     {{timing.timestamp}}
     <!-- <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
@@ -36,7 +36,7 @@
 </div>
 <div>
   <h3>Threshold Violations</h3>
-  <div ng-repeat="violation in violations">
+  <div ng-repeat="violation in violations | orderBy'-'">
     {{violation.temperature}} &middot;
     {{violation.timestamp}}
   </div>
