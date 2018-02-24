@@ -3,6 +3,7 @@ angular.module('timing', [])
   '$scope','$http',
   function($scope,$http){
     $scope.timings = [];
+    $scope.violations = [];
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
 
     var bURL = '/sky/event/'+$scope.eci+'/eid/timing/started';
@@ -30,7 +31,15 @@ angular.module('timing', [])
       });
     };
 
+    var tURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/threshold_violations';
+    $scope.getViolations = function() {
+      return $http.get(tURL).success(function(data){
+        angular.copy(data, $scope.violations);
+      });
+    };
+
     $scope.getAll();
+    $scope.getViolations();
 
     $scope.timeDiff = function(timing) {
       var bgn_sec = Math.floor(Date.parse(timing.time_out)/1000);

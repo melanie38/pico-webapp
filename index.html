@@ -32,6 +32,10 @@
 </div>
 <div>
   <h3>Threshold Violations</h3>
+  <div ng-repeat="violation in violations">
+    {{violation.temperature}} &middot;
+    {{violation.timestamp}} &middot;
+  </div>
 </div>
   <!-- <form ng-submit="addTiming()" style = "margin-top:30px;">
     <input type="text" ng-model="number" placeholder="number"></input>
