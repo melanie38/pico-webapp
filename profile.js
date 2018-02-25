@@ -2,8 +2,8 @@ angular.module('profile', [])
 .controller('ProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
-    $scope.name = "Ola";
-    $scope.location = "";
+    $scope.name = "Joseph";
+    // $scope.location = "";
     // $scope.threshold = 0;
     // $scope.phone = "";
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
@@ -37,7 +37,7 @@ angular.module('profile', [])
     };
 
     $scope.getName();
-    $scope.getLocation();
+    // $scope.getLocation();
     // $scope.getThreshold();
     // $scope.getPhone();
 
