@@ -36,10 +36,10 @@ angular.module('profile', [])
       });
     };
 
-    $scope.getName();
-    $scope.getLocation();
-    $scope.getThreshold();
-    $scope.getPhone();
+    // $scope.getName();
+    // $scope.getLocation();
+    // $scope.getThreshold();
+    // $scope.getPhone();
 
   }
 ]);
