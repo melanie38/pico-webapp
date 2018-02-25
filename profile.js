@@ -2,7 +2,7 @@ angular.module('profile', [])
 .controller('ProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
-    $scope.name = "";
+    $scope.name = "Melanie";
     $scope.location = "";
     // $scope.threshold = "";
     // $scope.phone = 0;
@@ -22,19 +22,19 @@ angular.module('profile', [])
       });
     };
 
-    var thresholdURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/threshold';
-    $scope.getThreshold = function() {
-      return $http.get(thresholdURL).success(function(data){
-        angular.copy(data, $scope.threshold);
-      });
-    };
-
-    var phoneURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/phone';
-    $scope.getPhone = function() {
-      return $http.get(phoneURL).success(function(data){
-        angular.copy(data, $scope.phone);
-      });
-    };
+    // var thresholdURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/threshold';
+    // $scope.getThreshold = function() {
+    //   return $http.get(thresholdURL).success(function(data){
+    //     angular.copy(data, $scope.threshold);
+    //   });
+    // };
+    //
+    // var phoneURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/phone';
+    // $scope.getPhone = function() {
+    //   return $http.get(phoneURL).success(function(data){
+    //     angular.copy(data, $scope.phone);
+    //   });
+    // };
 
     $scope.getName();
     $scope.getLocation();
