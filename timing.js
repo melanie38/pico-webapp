@@ -2,10 +2,10 @@ angular.module('timing', [])
 .controller('MainCtrl', [
   '$scope','$http',
   function($scope,$http){
-    $scope.name = "";
-    $scope.location = "";
-    $scope.threshold = "";
-    $scope.phone = "";
+    $scope.name = "Melanie";
+    $scope.location = "Grenoble";
+    $scope.threshold = "80";
+    $scope.phone = "0476702579";
     $scope.timings = [];
     $scope.violations = [];
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
