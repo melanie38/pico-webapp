@@ -1,5 +1,5 @@
 angular.module('profile', [])
-.controller('MainCtrl', [
+.controller('ProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
     $scope.name = "Melanie";
