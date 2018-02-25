@@ -1,45 +1,31 @@
 <!doctype html>
 <html>
 <head>
-  <title>Temperature</title>
+  <title>Profile</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="timing.js"></script>
+  <script src="profile.js"></script>
   <style type="text/css">
     span.finished { cursor: pointer; color: blue; text-decoration: underline; }
     div.eci input { visibility: hidden; }
     div.eci:hover input { visibility: visible; }
   </style>
 </head>
-<body ng-app="timing" ng-controller="MainCtrl">
+<body ng-app="profile" ng-controller="MainCtrl">
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
 <div class="page-header">
-  <h1>Temperature</h1>
-  <button type="button" class="btn btn-primary" ng-click="goToProfile()">Go to Profile</button>
+  <h1>Profile</h1>
+  <!-- <button type="button" class="btn btn-primary" ng-click="getAll()">Refresh</button> -->
 </div>
 <div>
-  <h3>Current Temperature</h3>
-  <div>
-    {{timings[timings.length - 1].temperature}} &middot;
-    {{timings[timings.length - 1].timestamp}}
-  </div>
+  <h3>Sensor Name</h3>
 </div>
 <div>
-  <h3>Recent Temperatures</h3>
-  <div ng-repeat="timing in timings.slice().reverse()">
-    {{timing.temperature}} &middot;
-    {{timing.timestamp}}
-    <!-- <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
-    <span ng-if="!!timing.time_in">&middot; {{timeDiff(timing)}}</span> -->
-  </div>
+  <h3>Location</h3>
 </div>
 <div>
-  <h3>Threshold Violations</h3>
-  <div ng-repeat="violation in violations.slice().reverse()">
-    {{violation.temperature}} &middot;
-    {{violation.timestamp}}
-  </div>
+  <h3>Threshold</h3>
 </div>
   <!-- <form ng-submit="addTiming()" style = "margin-top:30px;">
     <input type="text" ng-model="number" placeholder="number"></input>

@@ -1,4 +1,4 @@
-angular.module('timing', [])
+angular.module('profile', [])
 .controller('MainCtrl', [
   '$scope','$http',
   function($scope,$http){
@@ -23,10 +23,6 @@ angular.module('timing', [])
         $scope.getAll();
       });
     };
-
-    $scope.goToProfile = function(){
-      window.location = "profile.html";
-    }
 
     var gURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
     $scope.getAll = function() {
