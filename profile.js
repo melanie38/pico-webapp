@@ -2,9 +2,9 @@ angular.module('profile', [])
 .controller('ProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
-    $scope.name = "";
+    $scope.name = "Melanie";
     $scope.location = "";
-    $scope.timings = [];
+    $scope.timings;
     // $scope.threshold = "";
     // $scope.phone = 0;
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
