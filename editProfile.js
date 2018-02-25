@@ -14,7 +14,7 @@ angular.module('edit', [])
       return $http.post(udpateURL).success(function(data){
         $scope.name = '';
         $scope.location = '';
-        $scope.threshold = '';
+        $scope.threshold = 0;
         $scope.phone = '';
       });
     };
