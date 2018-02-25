@@ -2,8 +2,9 @@ angular.module('profile', [])
 .controller('ProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
-    $scope.name = "Melanie";
+    $scope.name = "";
     $scope.location = "";
+    $scope.timings = [];
     // $scope.threshold = "";
     // $scope.phone = 0;
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
@@ -19,6 +20,13 @@ angular.module('profile', [])
     $scope.getLocation = function() {
       return $http.get(locationURL).success(function(data){
         angular.copy(data, $scope.location);
+      });
+    };
+
+    var gURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
+    $scope.getAll = function() {
+      return $http.get(gURL).success(function(data){
+        angular.copy(data, $scope.timings);
       });
     };
 
@@ -38,6 +46,7 @@ angular.module('profile', [])
 
     $scope.getName();
     $scope.getLocation();
+    $scope.getAll();
     // $scope.getThreshold();
     // $scope.getPhone();
 
