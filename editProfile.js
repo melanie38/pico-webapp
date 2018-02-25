@@ -2,10 +2,6 @@ angular.module('edit', [])
 .controller('EditProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
-    $scope.name = '';
-    $scope.location = '';
-    $scope.threshold = 0;
-    $scope.phone = '';
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
 
     var udpateURL = 'http://35.161.218.80:8080/sky/event/'+
@@ -16,7 +12,10 @@ angular.module('edit', [])
       $scope.phone;
     $scope.saveProfile = function() {
       return $http.post(udpateURL).success(function(data){
-
+        $scope.name = '';
+        $scope.location = '';
+        $scope.threshold = '';
+        $scope.phone = '';
       });
     };
 
