@@ -1,4 +1,4 @@
-angular.module('profile', [])
+angular.module('timing', [])
 .controller('ProfileCtrl', [
   '$scope','$http',
   function($scope,$http){
