@@ -2,6 +2,7 @@ angular.module('timing', [])
 .controller('MainCtrl', [
   '$scope','$http',
   function($scope,$http){
+    $scope.name = "Melanie";
     $scope.timings = [];
     $scope.violations = [];
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
