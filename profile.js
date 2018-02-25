@@ -3,9 +3,9 @@ angular.module('profile', [])
   '$scope','$http',
   function($scope,$http){
     $scope.name = "Melanie";
-    $scope.location = "";
-    $scope.threshold = "";
-    $scope.phone = "";
+    $scope.location = "Grenoble";
+    $scope.threshold = "89";
+    $scope.phone = "0476702579";
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
 
     var nameURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/name';
