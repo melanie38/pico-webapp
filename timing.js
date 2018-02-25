@@ -26,7 +26,7 @@ angular.module('timing', [])
     // };
 
     $scope.goToProfile = function(){
-      window.location = "profile.html";
+      return window.location = "profile.html";
     }
 
     var gURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/temperatures';
