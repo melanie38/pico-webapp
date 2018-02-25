@@ -4,7 +4,7 @@ angular.module('edit', [])
   function($scope,$http){
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
 
-    var udpateURL = 'http://35.161.218.80:8080/sky/event/'+$scope.eci+'/0002/sensor/profile_updated';
+    var updateURL = 'http://35.161.218.80:8080/sky/event/'+$scope.eci+'/0002/sensor/profile_updated';
     $scope.saveProfile = function() {
       var url = updateURL +
         '?name='+$scope.name+
