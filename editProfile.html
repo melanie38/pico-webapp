@@ -1,39 +1,39 @@
 <!doctype html>
 <html>
 <head>
-  <title>Profile</title>
+  <title>Edit Profile</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="profile.js"></script>
+  <script src="editProfile.js"></script>
   <style type="text/css">
     span.finished { cursor: pointer; color: blue; text-decoration: underline; }
     div.eci input { visibility: hidden; }
     div.eci:hover input { visibility: visible; }
   </style>
 </head>
-<body ng-app="profile" ng-controller="ProfileCtrl">
+<body ng-app="edit" ng-controller="EditProfileCtrl">
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
 <div class="page-header">
-  <h1>Profile</h1>
-  <button type="button" class="btn btn-primary" ng-click="editProfile()">Edit Profile</button>
+  <h1>Edit Profile</h1>
 </div>
 <div>
   <h3>Sensor Name</h3>
-  {{name}}
+  <input type="text" ng-model="name" placeholder="name"></input>
 </div>
 <div>
   <h3>Location</h3>
-  {{location}}
+  <input type="text" ng-model="location" placeholder="location"></input>
 </div>
 <div>
   <h3>Threshold</h3>
-  {{threshold}}
+  <input type="text" ng-model="threshold" placeholder="threshold"></input>
 </div>
 <div>
   <h3>Phone Number</h3>
-  {{phone}}
+  <input type="text" ng-model="phone" placeholder="phone number"></input>
 </div>
+<button type="button" class="btn btn-primary" ng-click="saveProfile()">Save</button>
   <!-- <form ng-submit="addTiming()" style = "margin-top:30px;">
     <input type="text" ng-model="number" placeholder="number"></input>
     <input type="text" ng-model="name" placeholder="name"></input>

@@ -36,10 +36,14 @@ angular.module('profile', [])
       });
     };
 
-    // $scope.getName();
+    $scope.getName();
     $scope.getLocation();
     $scope.getThreshold();
     $scope.getPhone();
+
+    $scope.editProfile = function() {
+      window.location = "editProfile.html";
+    }
 
   }
 ]);
