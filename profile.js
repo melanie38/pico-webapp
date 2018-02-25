@@ -5,7 +5,7 @@ angular.module('profile', [])
     $scope.name = "Melanie";
     $scope.location = "";
     $scope.threshold = "";
-    $scoper.phone = "";
+    $scope.phone = "";
     $scope.eci = "UKs5YQUWhvJvrky73HCs8f";
 
     var nameURL = 'http://35.161.218.80:8080/sky/cloud/'+$scope.eci+'/temperature_store/name';
