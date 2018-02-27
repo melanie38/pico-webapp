@@ -12,6 +12,7 @@ angular.module('edit', [])
         '&threshold='+$scope.threshold+
         '&phone='+$scope.phone;
       return $http.post(url).success(function(data){
+        console.log('new temperature threshold is: '$scope.threshold);
         $scope.name = '';
         $scope.location = '';
         $scope.threshold = 0;
